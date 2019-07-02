@@ -9,6 +9,7 @@
     "url": "https://github.com/cipchk/ngx-ueditor/issues"
   },
   "scripts": {
+    "prepare": "npm run build",
     "analyze": "ng build --prod --build-optimizer --stats-json",
     "lint": "tslint -p tsconfig.json -c tslint.json 'lib/*/*.ts'",
     "test": "ng test --code-coverage --watch=false",
