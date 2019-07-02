@@ -107,7 +107,7 @@ export class UEditorComponent
     private cog: UEditorConfig,
     private cd: ChangeDetectorRef,
     private zone: NgZone,
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.inited = true;
@@ -169,7 +169,9 @@ export class UEditorComponent
       });
     });
     this.loading = false;
-    this.cd.detectChanges();
+    if (!this.cd['destroyed']) {
+      this.cd.detectChanges();
+    }
   }
 
   private destroy() {
